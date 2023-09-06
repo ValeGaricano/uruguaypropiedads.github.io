@@ -1,64 +1,68 @@
-*{
-    padding: 0%;
-    margin: 0%;
-}
-#menu{
-    margin:auto;
-    margin-right: 100px;
-    margin-left: 260px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    right: 0px;
-    letter-spacing: 1px;
-    border-radius: 20%;
-}
-
-ul, li{
-    list-style: none;
-}
-
-.menuu li a {
-    background-color: rgb(229,57,53);
-    
-    color: beige;
-    text-decoration: none;
-    padding: 20px 30px;
-    display:block;
-}
-
-.menuu li a:hover{
-    background-color: blue;
-}
-.menuu > li {
-    float: left;
-}
-.menuu li ul {
-    display: none;
-    position: absolute;
-    min-width: 140px;
-}
-.menuu li:hover > ul {
-    display: block;
-}
-.menuu li ul li{
-   position: relative;
-}
-
-.menuu li ul li ul{
-    right: -140px;
-    top: 0px;
-}
-img{
-    float: left;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    height: 90px;
-    width: 100px;
-    border-radius: 15%;
-}
-
-header{
-    background-color: rgb(229,57,53);
+/* Estilos para la barra de menú */
+#menu {
     position: fixed;
-    background-position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(220,31,38);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logo */
+#menu img {
+    height: 110px;
+    margin-left: 25px;
+    width: 100px;
+
+}
+
+/* Estilos para los elementos principales del menú */
+.menuu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menuu li {
+    margin-right: 20px;
+    position: relative; /* Establece una posición relativa para poder posicionar los submenús */
+}
+
+.menuu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px; /* Tamaño de fuente más grande para los elementos principales */
+    margin-right: 50px; /* Agrega un margen derecho para separar los textos */
+}
+
+/* Estilos para los submenús */
+.menuu li ul {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Coloca los submenús debajo de los elementos principales */
+    left: 0;
+    background-color: rgba(220,31,38);
+    padding: 10px 0;
+    display: none; /* Inicialmente oculta los submenús */
+}
+
+.menuu li:hover ul {
+    display: block; /* Muestra los submenús cuando se pasa el mouse sobre los elementos principales */
+    background-color: #fff;
+    color: black;
+}
+
+.menuu ul li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Evita que los textos de los elementos del submenú se dividan en varios renglones */
+}
+
+.menuu ul a {
+    color: #fff;
+    font-size: 25px; /* Tamaño de fuente más pequeño para los elementos del submenú */
 }
